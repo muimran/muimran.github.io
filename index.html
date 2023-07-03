@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <title>spices</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
       body {
-        background-color: #fffff0  ;
+        background-color: #fffff0;
         display: flex;
         justify-content: center;
         
@@ -18,17 +18,28 @@
       }
 
       .text-container {
-        width: 33%;
+        width: 80vw;
+        padding: 0 10vw;
         margin-top: 5%;
         margin-bottom: 5%;
-        line-height: 1.75;
-        font-size: 20px;
+        line-height: 1.2em;
+        font-size: calc(12px + 1vw);
       }
 
-      .text-container iframe {
-        width: 90%;
-        height: 450px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+      .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        margin-bottom: 1em;
+      }
+
+      .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
 
       .text-container h1 {
@@ -47,35 +58,27 @@
         font-weight: bold;
       }
 
+      /* Responsive styles for small screens */
       @media (max-width: 767px) {
         .text-container {
-          font-size: 24px; /* even larger font size for very small screens */
+          font-size: calc(12px + 1vw);
         }
       }
 
       /* Responsive styles for medium screens */
       @media (min-width: 768px) {
         .text-container {
-          width: 90%;
-          font-size: 22px;
-        }
-
-        .text-container h1 {
-          font-size: 2.5em;
+          font-size: calc(14px + 0.5vw);
+          line-height: 1.5em;
         }
       }
 
       /* Responsive styles for larger screens */
       @media (min-width: 1200px) {
         .text-container {
-          width: 40%;
-          font-size: 20px;
+          font-size: calc(16px + 0.2vw);
         }
-
-        .text-container h1 {
-          font-size: 3em;
-        }
-        }
+      }
     </style>
   </head>
   <body>
@@ -83,32 +86,30 @@
 
       <h1>Behind the Flavor</h1>
       <h3>Unpacking the Top Spices in Global Cuisines</h3>
-      
-      <p>What determines the authenticity of a Korean, Italian, or Thai dish? Much of it boils down to the spices - the magical ingredients that impart a unique signature to each cuisine. I sifted through a dataset available on Kaggle.com (originally scraped from Yummly, a personalized recipe recommendation website), and discovered the top five spices from seven different global cuisines. However, my interest extends beyond mere rankings; let's explore the intricate interplay of flavor profiles and the connections within food cultures.</p>      
-      
-      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTwzxqHz2GsF3xj4Z7E6THr%2Fspice-network%3Ftype%3Ddesign%26node-id%3D1%253A205%26mode%3Ddesign%26t%3DM7DlgbnBDQg6VeYB-1" allowfullscreen></iframe>      
-      
-      <p>Garlic, the ubiquitous culinary companion, stands out in all the cuisines discussed here except Japanese. Whether it's heightening the flavors of kimchi or harmonizing in a garlicky Thai stir-fry, it's a clear favorite. Yet, it shares the limelight with onions in Indian and Mexican fare, contributing to the robust flavors that define these cuisines.</p>
 
-      <p>Ginger, the rhizome with a bite, takes center stage in Japanese cooking, where it is often pickled or grated fresh for a zingy note. Chinese cuisine also loves its ginger, but this time it cozies up with garlic for that unmistakable aromatic duo.</p>
-
-      <iframe title="Most Commonly Used Ingredients in Different Cuisines" aria-label="Bar Chart" id="datawrapper-chart-83v5O" src="https://datawrapper.dwcdn.net/83v5O/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="446" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script>
-
-      <p>Speaking of harmonious duos, black and white pepper, the fraternal twins of the spice world, are a staple in Italian and Thai kitchens, lending warmth and a peppery kick. Mexican cuisine, on the other hand, cranks up the heat with chilies, vital for that quintessential Mexican flavor.</p>
+      <p>What determines the authenticity of a Korean, Italian, or Thai dish?...</p>      
       
-      <p>Cumin, the earthy spice, is a frequent flyer in Indian and Mexican dishes, adding depth to curries and smokiness to tacos. Green onion, a more subtle member of the allium family, shines in Korean, Japanese, and Thai dishes, adding freshness to balance other strong flavors.</p>
+      <div class="iframe-container">
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTwzxqHz2GsF3xj4Z7E6THr%2Fspice-network%3Ftype%3Ddesign%26node-id%3D1%253A205%26mode%3Ddesign%26t%3DM7DlgbnBDQg6VeYB-1" allowfullscreen></iframe>
+      </div>
+
+      <p>Garlic, the ubiquitous culinary companion, stands out in all...</p>
+
+      <p>Ginger, the rhizome with a bite, takes center stage...</p>
+
+      <div class="iframe-container">
+        <iframe title="Most Commonly Used Ingredients in Different Cuisines" aria-label="Bar Chart" id="datawrapper-chart-83v5O" src="https://datawrapper.dwcdn.net/83v5O/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="446" data-external="1"></iframe>
+      </div>
+      
+      <p>Speaking of harmonious duos, black and white pepper,...</p>
+      
+      <p>Cumin, the earthy spice, is a frequent flyer...</p>
      
-      <p>When it comes to herbs, Italian and Thai cuisines share a love for basil. Whether it's the sweet basil in a Neapolitan sauce or the fragrant Thai basil in a green curry, the herb's aromatic nature transcends borders. Similarly, parsley in Italy and cilantro in Mexico illustrate the power of fresh herbs in Mediterranean and Latin American cuisines.</p>
+      <p>When it comes to herbs, Italian and Thai cuisines share...</p>
       
-      <p>The spices and herbs used in a cuisine are a reflection of its culture, geography, and history. They are the silent storytellers that carry the essence of each cuisine, making each dish a unique culinary experience. From the heat of chilies in Mexican cuisine to the aromatic duo of garlic and ginger in Chinese dishes, these ingredients are the soul of the dishes they create. Understanding these flavor profiles not only enhances our cooking but also deepens our appreciation for the richness of global cuisines. So, the next time you savor a dish, take a moment to appreciate the symphony of spices that dance on your palate.</p>
+      <p>The spices and herbs used in a cuisine are a reflection...</p>
 
       <p>Notebook and data available <a href="https://github.com/muimran/lede_project_1">here</a></p>
-
-
-
-      </p>
-
     </div>
   </body>
 </html>
